@@ -26,14 +26,6 @@
 
 ---
 
-## 📁 Project Structure
-
-Orato/
-├── main.py # FastAPI application
-├── orato_functions.py # Core logic for OCR and TTS
-├── temp_uploads/ # Temporary image storage
-├── output.mp3 # Final audio output
-└── README.md # Project documentation
 
 ## 💡 Motivation
 
