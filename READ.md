@@ -35,14 +35,14 @@ Orato/
 ├── output.mp3 # Final audio output
 └── README.md # Project documentation
 
-💡 Motivation
+## 💡 Motivation
 
 I created Orato as a side project to explore the integration of OCR and speech synthesis using Python APIs.
 The goal was to build a minimal, functioning prototype for accessibility technology that bridges vision and audio. 
 It also helped me improve my understanding of REST API development, computer vision, and working with media files in Python.
 
 
-🔮 Future Improvements
+## 🔮 Future Improvements
 
 Add language translation and multilingual support
 Add speech speed and pitch control
