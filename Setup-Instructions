@@ -1,0 +1,76 @@
+=============================
+🚀 ORATO SETUP INSTRUCTIONS
+=============================
+
+This guide will help you set up and run the ORATO project on your local machine.
+
+-----------------------------
+📁 STEP 1: Clone the Repository
+-----------------------------
+
+git clone https://github.com/yourusername/orato.git
+cd orato
+
+-----------------------------
+🐍 STEP 2: (Optional) Create Virtual Environment
+-----------------------------
+
+python3 -m venv venv
+source venv/bin/activate       # On Windows: venv\Scripts\activate
+
+-----------------------------
+📦 STEP 3: Install Dependencies
+-----------------------------
+
+pip install -r requirements.txt
+
+If you don’t have a requirements.txt file, install manually:
+
+pip install fastapi uvicorn pytesseract gTTS opencv-python pillow pydub playsound
+
+-----------------------------
+🧠 STEP 4: Install Tesseract OCR
+-----------------------------
+
+✅ macOS (using Homebrew):
+
+brew install tesseract
+export TESSDATA_PREFIX=/opt/homebrew/share/tessdata/
+
+✅ Windows:
+
+1. Download from https://github.com/tesseract-ocr/tesseract
+2. Install and note the installation path (e.g., C:\Program Files\Tesseract-OCR)
+3. Add this path to your System Environment Variables
+4. Also set the TESSDATA_PREFIX environment variable to your tessdata directory
+
+-----------------------------
+🟢 STEP 5: Run the FastAPI App
+-----------------------------
+
+uvicorn main:app --reload
+
+Visit the docs: http://127.0.0.1:8000/docs
+
+You can upload an image here and test the endpoint.
+
+-----------------------------
+📝 OUTPUT
+-----------------------------
+
+The API will:
+- Preprocess the uploaded image
+- Extract text using OCR
+- Convert it to speech using gTTS
+- Save and return an output.mp3 audio file
+- Play the audio 
+
+
+-----------------------------
+❌ COMMON ERRORS
+-----------------------------
+
+- "[OCR Error]": Make sure Tesseract is installed and `TESSDATA_PREFIX` is correctly set.
+- "[TTS Error: Language not supported: eng]": Use `"en"` for the `gTTS` language code.
+
+
